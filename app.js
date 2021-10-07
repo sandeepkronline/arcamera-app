@@ -7,11 +7,10 @@ function loadMarkers(){
 	console.log(imageId);
 	console.log(markerId);
 	
-	if( type == "3d"){
+	if( markerType == "3d"){
 		load3dModles();
 	}
-	else
-	{
+	else{
 		loadImages();
 	}
 	
