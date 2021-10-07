@@ -84,6 +84,7 @@ function loadText(){
 	markerDiv.setAttribute("value", modelId);
 	markerDiv.setAttribute("scale", "100 100 100");
 	markerDiv.setAttribute("color", "black");
+	markerDiv.setAttribute("rotation", "0 0 45");
 	var element = document.getElementById("#marker");
 	element.appendChild(markerDiv);	
 }
