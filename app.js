@@ -2,10 +2,11 @@ function loadMarkers(){
 	// Get Query Parameters
 	const urlParams = new URLSearchParams(window.location.search)
 	let imageId = urlParams.get("image")
-	let markerId = urlParams.get("marker")
+	let modelId = urlParams.get("model")
 	let markerType= urlParams.get("type")
 	console.log(imageId);
-	console.log(markerId);
+	console.log(modelId);
+	console.log(markerType);
 	
 	if( markerType == "3d"){
 		load3dModles();
@@ -32,15 +33,15 @@ function loadMarkers(){
 
 function load3dModles(){
 	const urlParams = new URLSearchParams(window.location.search)
-	let markerId = urlParams.get("marker")
+	let modelId = urlParams.get("model")
 	
 	const markerDiv = document.createElement("a-gltf-model");
-	if( markerId == "1"){
+	if( modelId == "1"){
 		markerDiv.setAttribute("gltf-model", "models/3D/melite.gltf");
 		markerDiv.setAttribute("scale", "50 50 50");
 		markerDiv.setAttribute("position", "100 -300 0" );	
 	}
-	else if (markerId == "2"){
+	else if (modelId == "2"){
 		markerDiv.setAttribute("gltf-model", "models/3D/skyscraper.gltf");
 		markerDiv.setAttribute("scale", "10 10 10");
 		markerDiv.setAttribute("position", "100 -300 0" );
@@ -59,14 +60,16 @@ function load3dModles(){
 
 function loadImages(){
 	const urlParams = new URLSearchParams(window.location.search)
-	let markerId = urlParams.get("marker")
+	let modelId = urlParams.get("model")
 	const markerDiv = document.createElement("a-image");
-	if( markerId == "1"){
-		markerDiv.setAttribute("src", "models/Image/love.png");
+	if( modelId == "1"){
+		markerDiv.setAttribute("src", "models/Image/butterflies.gif");
 		markerDiv.setAttribute("scale", "100 100 100");
 		markerDiv.setAttribute("rotation", "-90 0 0");	
 	}else{
-		
+		markerDiv.setAttribute("src", "models/Image/love.png");
+		markerDiv.setAttribute("scale", "100 100 100");
+		markerDiv.setAttribute("rotation", "-90 0 0");	
 	}
 	var element = document.getElementById("#marker");
 	element.appendChild(markerDiv);	
