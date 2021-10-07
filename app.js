@@ -3,6 +3,7 @@ function loadMarkers(){
 	const urlParams = new URLSearchParams(window.location.search)
 	let imageId = urlParams.get("image")
 	let markerId = urlParams.get("marker")
+	let markerType= urlParams.get("type")
 	console.log(imageId);
 	console.log(markerId);
 	
@@ -21,7 +22,7 @@ function loadMarkers(){
 	}
 	else if (markerId == "2"){
 		markerDiv.setAttribute("gltf-model", "models/3D/skyscraper.gltf");
-		markerDiv.setAttribute("scale", "5 5 5");
+		markerDiv.setAttribute("scale", "10 10 10");
 		markerDiv.setAttribute("position", "100 -300 0" );
 		markerDiv.setAttribute("rotation", "0 0 0" );	
 	}
@@ -29,7 +30,7 @@ function loadMarkers(){
 		markerDiv.setAttribute("gltf-model", "models/3D/valentim.gltf");
 		markerDiv.setAttribute("scale", "10 10 10");
 		markerDiv.setAttribute("position", "100 -300 0" );
-		markerDiv.setAttribute("rotation", "0 0 0" );
+		markerDiv.setAttribute("rotation", "0 45 45" );
 		
 	}
 	var element = document.getElementById("#marker");
