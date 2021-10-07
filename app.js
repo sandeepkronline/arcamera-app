@@ -3,19 +3,20 @@ function loadMarkers(){
 	const urlParams = new URLSearchParams(window.location.search)
 	let imageId = urlParams.get("image")
 	let modelId = urlParams.get("model")
-	let markerType= urlParams.get("type")
+	let modelType= urlParams.get("type")
 	console.log(imageId);
 	console.log(modelId);
-	console.log(markerType);
+	console.log(modelType);
 	
-	if( markerType == "3d"){
+	if( modelType == "3d"){
 		load3dModles();
 	}
-	else if( markerType == "2d"){
+	else if( modelType == "2d"){
 		loadImages();
 	}
-	else
+	else if( modelType == "text")
 	{
+		loadText()
 	}
 	
 	// Upadate tracking image URL
@@ -74,3 +75,16 @@ function loadImages(){
 	var element = document.getElementById("#marker");
 	element.appendChild(markerDiv);	
 }
+
+
+function loadText(){
+	const urlParams = new URLSearchParams(window.location.search)
+	let modelId = urlParams.get("model")
+	const markerDiv = document.createElement("a-text");
+	markerDiv.setAttribute("value", modelId);
+	markerDiv.setAttribute("scale", "100 100 100");
+	markerDiv.setAttribute("color", "black");
+	var element = document.getElementById("#marker");
+	element.appendChild(markerDiv);	
+}
+
