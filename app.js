@@ -67,10 +67,12 @@ function loadImages(){
 		markerDiv.setAttribute("src", "models/Image/butterflies.gif");
 		markerDiv.setAttribute("scale", "100 100 100");
 		markerDiv.setAttribute("rotation", "-90 0 0");	
+		markerDiv.setAttribute("position", "100 -300 0" );
 	}else{
 		markerDiv.setAttribute("src", "models/Image/love.png");
 		markerDiv.setAttribute("scale", "100 100 100");
 		markerDiv.setAttribute("rotation", "-90 0 0");	
+		markerDiv.setAttribute("position", "100 -300 0" );
 	}
 	var element = document.getElementById("#marker");
 	element.appendChild(markerDiv);	
@@ -82,9 +84,10 @@ function loadText(){
 	let modelId = urlParams.get("model")
 	const markerDiv = document.createElement("a-text");
 	markerDiv.setAttribute("value", modelId);
-	markerDiv.setAttribute("scale", "100 100 100");
+	markerDiv.setAttribute("scale", "200 200 200");
 	markerDiv.setAttribute("color", "black");
 	markerDiv.setAttribute("rotation", "0 0 45");
+	markerDiv.setAttribute("position", "100 -300 0" );
 	var element = document.getElementById("#marker");
 	element.appendChild(markerDiv);	
 }
