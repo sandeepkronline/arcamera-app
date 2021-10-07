@@ -58,9 +58,13 @@ function loadImages(){
 	const urlParams = new URLSearchParams(window.location.search)
 	let markerId = urlParams.get("marker")
 	const markerDiv = document.createElement("a-image");
-	markerDiv.setAttribute("src", "models/Image/butterflies.gif");
-	markerDiv.setAttribute("scale", "100 100 100");
-	markerDiv.setAttribute("rotation", "-90 0 0");	
+	if( markerId == "1"){
+		markerDiv.setAttribute("src", "models/Image/love.png");
+		markerDiv.setAttribute("scale", "100 100 100");
+		markerDiv.setAttribute("rotation", "-90 0 0");	
+	}else{
+		
+	}
 	var element = document.getElementById("#marker");
 	element.appendChild(markerDiv);	
 }
