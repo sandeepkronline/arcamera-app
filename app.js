@@ -7,6 +7,14 @@ function loadMarkers(){
 	console.log(imageId);
 	console.log(markerId);
 	
+	if( type == "3d"){
+		load3dModles();
+	}
+	else
+	{
+		loadImages();
+	}
+	
 	// Upadate tracking image URL
 	let baseUrl = "https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/sandeepkronline/webar/main/track/";
 	let nftUrl = baseUrl + imageId + "/" + imageId;
@@ -14,6 +22,16 @@ function loadMarkers(){
 	var nftNode = document.getElementById("#marker");
 	nftNode.setAttribute("url", nftUrl);
 
+
+		
+	//https://carnaux.github.io/NFT-Marker-Creator/
+	//https://console.echo3d.co/#/pages/contentmanager
+}
+
+function load3dModles(){
+	const urlParams = new URLSearchParams(window.location.search)
+	let markerId = urlParams.get("marker")
+	
 	const markerDiv = document.createElement("a-gltf-model");
 	if( markerId == "1"){
 		markerDiv.setAttribute("gltf-model", "models/3D/melite.gltf");
@@ -35,8 +53,15 @@ function loadMarkers(){
 	}
 	var element = document.getElementById("#marker");
 	element.appendChild(markerDiv);
-		
-	//https://carnaux.github.io/NFT-Marker-Creator/
-	//https://console.echo3d.co/#/pages/contentmanager
 }
 
+function loadImages(){
+	const urlParams = new URLSearchParams(window.location.search)
+	let markerId = urlParams.get("marker")
+	const markerDiv = document.createElement("a-image");
+	markerDiv.setAttribute("src", "models\Image\butterflies.gif");
+	markerDiv.setAttribute("scale", "100 100 100");
+	markerDiv.setAttribute("rotation", "-90 0 0");	
+	var element = document.getElementById("#marker");
+	element.appendChild(markerDiv);	
+}
