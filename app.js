@@ -10,8 +10,11 @@ function loadMarkers(){
 	if( markerType == "3d"){
 		load3dModles();
 	}
-	else{
+	else if( markerType == "2d"){
 		loadImages();
+	}
+	else
+	{
 	}
 	
 	// Upadate tracking image URL
