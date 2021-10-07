@@ -17,7 +17,7 @@ function loadMarkers(){
 	if( markerId == "1"){
 		markerDiv.setAttribute("gltf-model", "models/3D/melite.gltf");
 		markerDiv.setAttribute("scale", "50 50 50");
-		markerDiv.setAttribute("position", "0 0 0" );	
+		markerDiv.setAttribute("position", "100 -300 0" );	
 	}
 	else if (markerId == "2"){
 		markerDiv.setAttribute("gltf-model", "models/3D/skyscraper.gltf");
@@ -28,8 +28,8 @@ function loadMarkers(){
 	else{
 		markerDiv.setAttribute("gltf-model", "models/3D/valentim.gltf");
 		markerDiv.setAttribute("scale", "10 10 10");
-		markerDiv.setAttribute("position", "50 50 0" );
-		markerDiv.setAttribute("rotation", "90 0 90" );
+		markerDiv.setAttribute("position", "100 -300 0" );
+		markerDiv.setAttribute("rotation", "0 0 0" );
 		
 	}
 	var element = document.getElementById("#marker");
