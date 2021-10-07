@@ -22,7 +22,7 @@ function loadMarkers(){
 	else if (markerId == "2"){
 		markerDiv.setAttribute("gltf-model", "models/3D/skyscraper.gltf");
 		markerDiv.setAttribute("scale", "5 5 5");
-		markerDiv.setAttribute("position", "-100 150 0" );
+		markerDiv.setAttribute("position", "100 -150 0" );
 		markerDiv.setAttribute("rotation", "0 0 0" );	
 	}
 	else{
