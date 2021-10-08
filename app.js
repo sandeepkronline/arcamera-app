@@ -41,7 +41,7 @@ function load3dModles(){
 	
 	const markerDiv = document.createElement("a-gltf-model");
 	markerDiv.setAttribute("material","transparent:true;shader:flat;side:double;");
-	markerDiv.setAttribute("rotation", "0 90 0" );
+	markerDiv.setAttribute("rotation", "90 0 0" );
 	markerDiv.setAttribute("position", "0 0 0" );
 	if( modelId == "1"){
 		markerDiv.setAttribute("gltf-model", "models/3D/melite.gltf");
