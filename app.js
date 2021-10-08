@@ -8,16 +8,8 @@ function loadMarkers(){
 	console.log(modelId);
 	console.log(modelType);
 	
-	if( modelType == "3d"){
-		load3dModles();
-	}
-	else if( modelType == "2d"){
-		loadImages();
-	}
-	else if( modelType == "text")
-	{
-		loadText()
-	}
+
+	
 	
 	// Upadate tracking image URL
 	let baseUrl = "https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/sandeepkronline/webar/main/track/";
@@ -25,6 +17,17 @@ function loadMarkers(){
 	console.log(nftUrl);
 	var nftNode = document.getElementById("#marker");
 	nftNode.setAttribute("url", nftUrl);
+	
+	if( modelType == "3d1"){
+		load3dModles();
+	}
+	else if( modelType == "2d1"){
+		loadImages();
+	}
+	else if( modelType == "text1")
+	{
+		loadText()
+	}
 
 
 		

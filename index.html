@@ -6,7 +6,7 @@
  <script>
      AFRAME.registerComponent('loader', {
        init: function() {
-         let loader = document.querySelector("#marker")
+         let loader = document.querySelector("#model")
          this.el.addEventListener('model-loaded', e => {
            console.log('loaded')
            var nftNode = document.getElementById("#marker");
@@ -59,8 +59,17 @@
       smoothTolerance=".01"
       smoothThreshold="5"
     >		
+	<a-gltf-model id= "#model" gltf-model="models/3D/skyscraper.gltf" material='transparent:true;shader:flat;side:double;metelness:2'  scale="5 5 5" position="50 0 0" rotation="0 90 0" loader> </a-gltf-model>
     </a-nft>
     <a-entity camera></a-entity>
   </a-scene>
+   <script>
+         // Workaround for an AR.js bug (https://github.com/jeromeetienne/AR.js/issues/410)
+         const sceneEl = document.querySelector('a-scene');
+         sceneEl.addEventListener('loaded', () => {
+           sceneEl.camera = new THREE.PerspectiveCamera();
+           scene.add( camera );
+         });
+      </script>
 
 </body>
