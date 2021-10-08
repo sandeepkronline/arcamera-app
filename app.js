@@ -15,7 +15,7 @@ function loadMarkers(){
 	let baseUrl = "https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/sandeepkronline/webar/main/track/";
 	let nftUrl = baseUrl + imageId + "/" + imageId;
 	console.log(nftUrl);
-	var nftNode = document.getElementById("#marker");
+	var nftNode = document.getElementById("#modelEntity");
 	nftNode.setAttribute("url", nftUrl);
 	
 	if( modelType == "3d"){

@@ -1,66 +1,20 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.0.0/dist/mindar-image.prod.js"></script>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.0.0/dist/mindar-image-aframe.prod.js"></script>
+	<script src="app.js"></script> 
+  </head>
+  <body onload="loadMarkers()">
+    <a-scene mindar-image="imageTargetSrc: https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/sandeepkronline/camera-app/main/track/1001/1001.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
-<!-- <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>-->
-<script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
-<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
-
-<script src="app.js"></script> 
-
-<style>
-  .arjs-loader {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .arjs-loader div {
-    text-align: center;
-    font-size: 1.25em;
-    color: white;
-  }
-</style>
-
-<body style="margin : 0px; overflow: hidden;" onload="loadMarkers()">
-  <!-- minimal loader shown until image descriptors are loaded -->
-  <div class="arjs-loader">
-    <div>Loading, please wait...</div>
-  </div>
-  <a-scene
-    vr-mode-ui="enabled: false;"
-    renderer="logarithmicDepthBuffer: true;"
-    embedded
-    arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
-  >
-     <!-- we use cors proxy to avoid cross-origin problems -->
-    <a-nft
-	  id = "#marker"
-      type="nft"
-      url=""
-      smooth="true"
-      smoothCount="10"
-      smoothTolerance=".01"
-      smoothThreshold="5"
-	  rotation = "270 0 0"
-    >	
-	<a-entity  rotation = "0 0 0">
-	<a-gltf-model id= "#model" gltf-model="models/3D/skyscraper.gltf" material='transparent:true;shader:flat;side:double;' scale="5 5 5" position="0 0 0" rotation="0 0 0" > </a-gltf-model>
-	</a-entity>
-   </a-nft>
-    <a-entity camera></a-entity>
-  </a-scene>
-   <script>
-         // Workaround for an AR.js bug (https://github.com/jeromeetienne/AR.js/issues/410)
-         const sceneEl = document.querySelector('a-scene');
-         sceneEl.addEventListener('loaded', () => {
-           sceneEl.camera = new THREE.PerspectiveCamera();
-	
-         });
-      </script>
-
-</body>
+      <a-entity id="#modelEntity" mindar-image-target="targetIndex: 0">
+        <a-gltf-model rotation="0 0 0 " position="0 0 0" scale=".05 .05 .05" src="models/3D/skyscraper.gltf"
+          animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"
+        >
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
