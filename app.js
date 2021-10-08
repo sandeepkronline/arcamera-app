@@ -46,20 +46,15 @@ function load3dModles(){
 	markerDiv.setAttribute("position", "0 0 0" );
 	if( modelId == "1"){
 		markerDiv.setAttribute("gltf-model", "models/3D/melite.gltf");
-		markerDiv.setAttribute("scale", "1 1 1");
-		//markerDiv.setAttribute("position", "100 -300 0" );	
+		markerDiv.setAttribute("scale", "0.5 0.5 10.5");	
 	}
 	else if (modelId == "2"){
 		markerDiv.setAttribute("gltf-model", "models/3D/skyscraper.gltf");
 		markerDiv.setAttribute("scale", "0.05 0.05 0.05");
-		//markerDiv.setAttribute("position", "100 -300 0" );
-		//markerDiv.setAttribute("rotation", "0 0 0" );	
 	}
 	else{
 		markerDiv.setAttribute("gltf-model", "models/3D/valentim.gltf");
-		markerDiv.setAttribute("scale", "0.5 0.5 0.5");
-		//markerDiv.setAttribute("position", "100 -300 0" );
-		//markerDiv.setAttribute("rotation", "0 45 45" );
+		markerDiv.setAttribute("scale", "0.25 0.25 0.25");
 		
 	}
 	var element = document.getElementById("#modelEntity");
@@ -74,14 +69,10 @@ function loadImages(){
 	markerDiv.setAttribute("position", "0 0 0" );
 	if( modelId == "1"){
 		markerDiv.setAttribute("src", "models/Image/butterflies.gif");
-		markerDiv.setAttribute("scale", "1 1 0.1");
-		//markerDiv.setAttribute("rotation", "-90 0 0");	
-		//markerDiv.setAttribute("position", "100 -300 0" );
+		markerDiv.setAttribute("scale", "1 1 1");
 	}else{
 		markerDiv.setAttribute("src", "models/Image/love.png");
 		markerDiv.setAttribute("scale", "1 1 1");
-		//markerDiv.setAttribute("rotation", "-90 0 0");	
-		//markerDiv.setAttribute("position", "100 -300 0" );
 	}
 	var element = document.getElementById("#modelEntity");
 	element.appendChild(markerDiv);	
@@ -93,10 +84,8 @@ function loadText(){
 	let modelId = urlParams.get("model")
 	const markerDiv = document.createElement("a-text");
 	markerDiv.setAttribute("value", modelId);
-	markerDiv.setAttribute("scale", "100 100 100");
+	markerDiv.setAttribute("scale", "1 1 1");
 	markerDiv.setAttribute("color", "black");
-	//markerDiv.setAttribute("rotation", "0 0 45");
-	//markerDiv.setAttribute("position", "100 -100 50" );
 	markerDiv.setAttribute("rotation", "0 0 0" );
 	markerDiv.setAttribute("position", "0 0 0" );
 	var element = document.getElementById("#modelEntity");
