@@ -15,6 +15,7 @@ function loadMarkers(){
 	let imageSample = baseUrl + imageId + "/" + imageId + ".mind;";
 	imageSample = "imageTargetSrc: " + imageSample;
 	console.log(imageSample);
+	
 	var sceneNode = document.getElementById("#scene");
 	sceneNode.setAttribute("mindar-image", imageSample);
 	
@@ -40,7 +41,7 @@ function load3dModles(){
 	let modelId = urlParams.get("model")
 	
 	const markerDiv = document.createElement("a-gltf-model");
-	markerDiv.setAttribute("material","transparent:true;shader:flat;side:double;");
+	markerDiv.setAttribute("animation","property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate");
 	markerDiv.setAttribute("rotation", "0 0 0" );
 	markerDiv.setAttribute("position", "0 0 0" );
 	if( modelId == "1"){
@@ -50,7 +51,7 @@ function load3dModles(){
 	}
 	else if (modelId == "2"){
 		markerDiv.setAttribute("gltf-model", "models/3D/skyscraper.gltf");
-		markerDiv.setAttribute("scale", "10 10 10");
+		markerDiv.setAttribute("scale", "0.05 0.05 0.05");
 		//markerDiv.setAttribute("position", "100 -300 0" );
 		//markerDiv.setAttribute("rotation", "0 0 0" );	
 	}
@@ -61,7 +62,7 @@ function load3dModles(){
 		//markerDiv.setAttribute("rotation", "0 45 45" );
 		
 	}
-	var element = document.getElementById("#marker");
+	var element = document.getElementById("#modelEntity");
 	element.appendChild(markerDiv);
 }
 
@@ -82,7 +83,7 @@ function loadImages(){
 		//markerDiv.setAttribute("rotation", "-90 0 0");	
 		//markerDiv.setAttribute("position", "100 -300 0" );
 	}
-	var element = document.getElementById("#marker");
+	var element = document.getElementById("#modelEntity");
 	element.appendChild(markerDiv);	
 }
 
@@ -98,7 +99,7 @@ function loadText(){
 	//markerDiv.setAttribute("position", "100 -100 50" );
 	markerDiv.setAttribute("rotation", "0 0 0" );
 	markerDiv.setAttribute("position", "0 0 0" );
-	var element = document.getElementById("#marker");
+	var element = document.getElementById("#modelEntity");
 	element.appendChild(markerDiv);	
 }
 
