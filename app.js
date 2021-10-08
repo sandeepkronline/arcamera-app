@@ -13,7 +13,7 @@ function loadMarkers(){
 	// Upadate tracking image URL
 	let baseUrl = "https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/sandeepkronline/arcamera-app/main/track/";
 	let imageSample = baseUrl + imageId + "/" + imageId + ".mind;";
-	imageSample = "imageTargetSrc: "
+	imageSample = "imageTargetSrc: " + imageSample;
 	console.log(imageSample);
 	var sceneNode = document.getElementById("#scene");
 	sceneNode.setAttribute("mindar-image", imageSample);
