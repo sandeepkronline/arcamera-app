@@ -46,7 +46,7 @@ function load3dModles(){
 	markerDiv.setAttribute("position", "0 0 0" );
 	if( modelId == "1"){
 		markerDiv.setAttribute("gltf-model", "models/3D/melite.gltf");
-		markerDiv.setAttribute("scale", "0.05 0.05 0.05");
+		markerDiv.setAttribute("scale", "1 1 1");
 		//markerDiv.setAttribute("position", "100 -300 0" );	
 	}
 	else if (modelId == "2"){
@@ -57,7 +57,7 @@ function load3dModles(){
 	}
 	else{
 		markerDiv.setAttribute("gltf-model", "models/3D/valentim.gltf");
-		markerDiv.setAttribute("scale", "0.05 0.05 0.05");
+		markerDiv.setAttribute("scale", "0.5 0.5 0.5");
 		//markerDiv.setAttribute("position", "100 -300 0" );
 		//markerDiv.setAttribute("rotation", "0 45 45" );
 		
@@ -74,12 +74,12 @@ function loadImages(){
 	markerDiv.setAttribute("position", "0 0 0" );
 	if( modelId == "1"){
 		markerDiv.setAttribute("src", "models/Image/butterflies.gif");
-		markerDiv.setAttribute("scale", "0.05 0.05 0.05");
+		markerDiv.setAttribute("scale", "1 1 0.1");
 		//markerDiv.setAttribute("rotation", "-90 0 0");	
 		//markerDiv.setAttribute("position", "100 -300 0" );
 	}else{
 		markerDiv.setAttribute("src", "models/Image/love.png");
-		markerDiv.setAttribute("scale", "0.05 0.05 0.05");
+		markerDiv.setAttribute("scale", "1 1 1");
 		//markerDiv.setAttribute("rotation", "-90 0 0");	
 		//markerDiv.setAttribute("position", "100 -300 0" );
 	}
