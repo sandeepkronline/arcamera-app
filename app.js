@@ -84,10 +84,10 @@ function loadText(){
 	let modelId = urlParams.get("model")
 	const markerDiv = document.createElement("a-text");
 	markerDiv.setAttribute("value", modelId);
-	markerDiv.setAttribute("scale", "300 300 300");
+	markerDiv.setAttribute("scale", "500 500 500");
 	markerDiv.setAttribute("color", "black");
-	markerDiv.setAttribute("rotation", "90 0 45");
-	markerDiv.setAttribute("position", "200 -300 50" );
+	markerDiv.setAttribute("rotation", "0 0 45");
+	markerDiv.setAttribute("position", "100 -100 50" );
 	var element = document.getElementById("#marker");
 	element.appendChild(markerDiv);	
 }
