@@ -46,7 +46,7 @@ function load3dModles(){
 	markerDiv.setAttribute("position", "0 0 0" );
 	if( modelId == "1"){
 		markerDiv.setAttribute("gltf-model", "models/3D/sphere.glb");
-		markerDiv.setAttribute("scale", "0.5 0.5 0.5");	
+		markerDiv.setAttribute("scale", "0.75 0.75 0.75");	
 	}
 	else if (modelId == "2"){
 		markerDiv.setAttribute("gltf-model", "models/3D/skyscraper.gltf");
@@ -54,7 +54,7 @@ function load3dModles(){
 	}
 	else{
 		markerDiv.setAttribute("gltf-model", "models/3D/cutecat.glb");
-		markerDiv.setAttribute("scale", "0.5 0.5 0.5");
+		markerDiv.setAttribute("scale", "0.25 0.25 0.25");
 		
 	}
 	var element = document.getElementById("#modelEntity");
