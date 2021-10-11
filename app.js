@@ -53,7 +53,7 @@ function load3dModles(){
 		markerDiv.setAttribute("scale", "0.05 0.05 0.05");
 	}
 	else{
-		markerDiv.setAttribute("gltf-model", "models/3D/valentim.gltf");
+		markerDiv.setAttribute("gltf-model", "models/3D/cutecat.glb");
 		markerDiv.setAttribute("scale", "0.25 0.25 0.25");
 		
 	}
