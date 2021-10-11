@@ -46,14 +46,14 @@ function load3dModles(){
 	markerDiv.setAttribute("position", "0 0 0" );
 	if( modelId == "1"){
 		markerDiv.setAttribute("gltf-model", "models/3D/melite.gltf");
-		markerDiv.setAttribute("scale", "0.5 0.5 10.5");	
+		markerDiv.setAttribute("scale", "0.5 0.5 0.5");	
 	}
 	else if (modelId == "2"){
 		markerDiv.setAttribute("gltf-model", "models/3D/skyscraper.gltf");
 		markerDiv.setAttribute("scale", "0.05 0.05 0.05");
 	}
 	else{
-		markerDiv.setAttribute("gltf-model", "models/3D/valentim.gltf");
+		markerDiv.setAttribute("gltf-model", "models/3D/cutecat.glb");
 		markerDiv.setAttribute("scale", "0.25 0.25 0.25");
 		
 	}
