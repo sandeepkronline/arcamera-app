@@ -45,7 +45,7 @@ function load3dModles(){
 	markerDiv.setAttribute("rotation", "0 0 0" );
 	markerDiv.setAttribute("position", "0 0 0" );
 	if( modelId == "1"){
-		markerDiv.setAttribute("gltf-model", "models/3D/melite.gltf");
+		markerDiv.setAttribute("gltf-model", "models/3D/sphere.glb");
 		markerDiv.setAttribute("scale", "0.5 0.5 0.5");	
 	}
 	else if (modelId == "2"){
@@ -54,7 +54,7 @@ function load3dModles(){
 	}
 	else{
 		markerDiv.setAttribute("gltf-model", "models/3D/cutecat.glb");
-		markerDiv.setAttribute("scale", "0.25 0.25 0.25");
+		markerDiv.setAttribute("scale", "0.5 0.5 0.5");
 		
 	}
 	var element = document.getElementById("#modelEntity");
