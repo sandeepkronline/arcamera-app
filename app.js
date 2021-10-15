@@ -12,7 +12,7 @@ function loadMarkers(){
 	
 	// Upadate tracking image URL
 	let baseUrl = "https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/sandeepkronline/arcamera-app/main/track/";
-	let imageSample = baseUrl + imageId + "/" + imageId + ".mind;";
+	let imageSample = baseUrl + imageId + ".mind;";
 	imageSample = "imageTargetSrc: " + imageSample;
 	console.log(imageSample);
 	
